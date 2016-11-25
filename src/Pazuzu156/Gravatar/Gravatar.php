@@ -31,7 +31,7 @@ class Gravatar implements IImage
      *
      * @var string
      */
-    const BASE_HTTPS = 'http://secure.gravatar.com/avatar/';
+    const BASE_HTTPS = 'https://secure.gravatar.com/avatar/';
 
     /**
      * Class constructor.

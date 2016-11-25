@@ -40,7 +40,7 @@ To set extra options before generation, use the following. (All can be chained t
 
 `setRating` sets the max rating for the requested Gravatar image. Reger to `IImage` for available ratings
 
-### `setSize()`
+#### `setSize()`
 
 `setSize` sets the size of the requested Gravatar image. (The default is 500 as set in the libraries's configuration, or parameter if you're not using the configuration script)
 

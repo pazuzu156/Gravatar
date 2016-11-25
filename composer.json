@@ -1,0 +1,20 @@
+{
+    "name": "pazuzu156/gravatar",
+    "description": "Quickly get the user's Gravatar image",
+    "keywords": ["library","avatar","gravatar"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kaleb Klein",
+            "email": "klein.jae@gmail.com",
+            "homepage": "https://kalebklein.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Pazuzu156\\Gravatar\\": "src/Pazuzu156/Gravatar/"
+        }
+    },
+    "minimum-stability": "dev"
+}

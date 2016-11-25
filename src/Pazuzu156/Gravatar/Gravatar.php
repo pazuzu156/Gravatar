@@ -24,7 +24,7 @@ class Gravatar implements IImage
      *
      * @var string
      */
-    const BASE_HTTP  = 'http://www.gravatar.com/avatar/';
+    const BASE_HTTP = 'http://www.gravatar.com/avatar/';
 
     /**
      * The Base URL for the secure URL.
@@ -68,7 +68,7 @@ class Gravatar implements IImage
             $this->_options['email'] = $email;
             $this->_options['hash'] = strtolower(md5(trim($this->_options['email'])));
         } else {
-            throw new \Exception("The email is in an invalid format!");
+            throw new \Exception('The email is in an invalid format!');
         }
 
         return $this;
@@ -154,17 +154,17 @@ class Gravatar implements IImage
 
         $uri = '?';
 
-        $ignore = ['email','hash','secure'];
-        foreach($this->_options as $k => $v) {
+        $ignore = ['email', 'hash', 'secure'];
+        foreach ($this->_options as $k => $v) {
             if (!in_array($k, $ignore)) {
-                $uri .= $k . '=' . $v . '&';
+                $uri .= $k.'='.$v.'&';
             }
         }
 
         $uri = rtrim($uri, '&');
-        $url = (($this->_options['secure']) ? self::BASE_HTTPS : self::BASE_HTTP) . $this->getHash();
+        $url = (($this->_options['secure']) ? self::BASE_HTTPS : self::BASE_HTTP).$this->getHash();
 
-        return $url . $uri;
+        return $url.$uri;
     }
 
     /**
@@ -185,17 +185,17 @@ class Gravatar implements IImage
         $img = '<img src="' . $this->src($email, $attr) . '"';
 
         if (!empty($alt)) {
-            $img .= ' alt="' . $alt . '"';
+            $img .= ' alt="'.$alt.'"';
         }
 
         if (isset($attr['width'])) {
-            $img .= ' width="' . $attr['width'] . '"';
+            $img .= ' width="'.$attr['width'].'"';
         }
 
         if (isset($attr['height'])) {
-            $img .= ' height="' . $attr['height'] . '"';
+            $img .= ' height="'.$attr['height'].'"';
         }
 
-        return $img . '>';
+        return $img.'>';
     }
 }

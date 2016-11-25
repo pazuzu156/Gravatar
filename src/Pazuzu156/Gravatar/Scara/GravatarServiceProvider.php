@@ -16,9 +16,10 @@ class GravatarServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->create('gravatar', function() {
+        $this->create('gravatar', function () {
             $c = new Configuration();
             $cc = $c->from('gravatar');
+
             return new Gravatar($c->get('defaults.size'), $c->get('secure'));
         });
     }

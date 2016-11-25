@@ -182,7 +182,7 @@ class Gravatar implements IImage
             $email = $this->_options['email'];
         }
 
-        $img = '<img src="' . $this->src($email, $attr) . '"';
+        $img = '<img src="'.$this->src($email, $attr).'"';
 
         if (!empty($alt)) {
             $img .= ' alt="'.$alt.'"';

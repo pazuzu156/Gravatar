@@ -16,7 +16,7 @@ trait Settable
      */
     protected function setSift($imgset)
     {
-        switch($imgset) {
+        switch ($imgset) {
         case 0:
             return 404;
             break;
@@ -44,7 +44,7 @@ trait Settable
      */
     protected function ratSift($rating)
     {
-        switch($rating) {
+        switch ($rating) {
         case 5:
             return 'g';
             break;

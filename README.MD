@@ -3,6 +3,29 @@
 
 This Gravatar library is built to be simple to use AND integrate into my own framework as well as Laravel 5.
 
+## Installing
+You can either download the source code and include Gravatar in your code
+
+```php
+require_once 'path/to/src/Pazuzu156/Gravatar/autoload.php';
+
+use Pazuzu156\Gravatar\Gravatar;
+```
+
+or use Composer
+
+```shell
+$ composer require pazuzu156/gravatar ^1.0
+```
+
+and include it into your code
+
+```php
+require_once __DIR__.'/vendor/autoload.php';
+
+use Pazuzu156\Gravatar\Gravatar;
+```
+
 ## Default Use
 
 Create a new Gravatar instance

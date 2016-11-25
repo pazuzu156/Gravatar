@@ -3,14 +3,14 @@
 namespace Pazuzu156\Gravatar;
 
 use Pazuzu156\Gravatar\ImageSet\IImage;
-use Pazuzu156\Gravatar\ImageSet\Settable;
+use Pazuzu156\Gravatar\ImageSet\Siftable;
 
 /**
  * Generates a Gravatar URL and Image.
  */
 class Gravatar implements IImage
 {
-    use Settable;
+    use Siftable;
 
     /**
      * The options to be used for generating the URL.

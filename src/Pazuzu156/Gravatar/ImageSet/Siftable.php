@@ -5,7 +5,7 @@ namespace Pazuzu156\Gravatar\ImageSet;
 /**
  * Trait for sifting through siftable items.
  */
-trait Settable
+trait Siftable
 {
     /**
      * Sift through image sets and give the real value.

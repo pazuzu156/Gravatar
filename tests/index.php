@@ -39,11 +39,11 @@ if (isset($_POST['email'])) {
         <?php if (!is_null($img)): ?>
         <p>Image using &lt;img&gt; tag</p>
         <br>
-        <img src="<?= $img->src('klein.jae@gmail.com'); ?>" alt="My Gravatar Image">
+        <img src="<?= $img->src($email); ?>" alt="My Gravatar Image">
         <br>
         <p>Image generated from class</p>
         <br>
-        <?= $img->img('klein.jae@gmail.com', 'My Gravatar Image'); ?>
+        <?= $img->img($email, 'My Gravatar Image'); ?>
         <?php endif; ?>
     </body>
 </html>

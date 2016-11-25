@@ -1,5 +1,9 @@
 # Gravatar
 [![StyleCI](https://styleci.io/repos/74735391/shield?branch=master)](https://styleci.io/repos/74735391)
+[![Latest Stable Version](https://poser.pugx.org/pazuzu156/gravatar/v/stable?format=flat-square)](https://packagist.org/packages/pazuzu156/gravatar)
+[![Downloads](https://img.shields.io/packagist/dt/pazuzu156/gravatar.svg?style=flat-square)](https://packagist.org/packages/pazuzu156/gravatar)
+[![Libraries.io for GitHub](https://img.shields.io/librariesio/github/pazuzu156/gravatar.svg?style=flat-square)](https://libraries.io/github/pazuzu156/Gravatar)
+[![Packagist](https://img.shields.io/packagist/l/pazuzu156/gravatar.svg?style=flat-square)](https://packagist.org/packages/pazuzu156/gravatar)
 
 This Gravatar library is built to be simple to use AND integrate into my own framework as well as Laravel 5.
 

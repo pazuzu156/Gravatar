@@ -4,15 +4,14 @@ $config = require_once __DIR__.'/../config.php';
 $d = $config['defaults'];
 
 use Pazuzu156\Gravatar\Gravatar;
-use Pazuzu156\Gravatar\ImageSet\IImage;
 
-$success = "";
-$email = "";
+$success = '';
+$email = '';
 $img = null;
 
 if (isset($_POST['email'])) {
     $email = trim($_POST['email']);
-    $success = "Valid Email. You should see your Gravatar image now!";
+    $success = 'Valid Email. You should see your Gravatar image now!';
     $img = new Gravatar($d['size'], $config['secure']);
 }
 
@@ -27,7 +26,7 @@ if (isset($_POST['email'])) {
         <?php
 
         if (!empty($success)) {
-            echo $success . '<br>';
+            echo $success.'<br>';
         }
 
         ?>

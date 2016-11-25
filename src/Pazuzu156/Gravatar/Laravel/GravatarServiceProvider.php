@@ -26,7 +26,7 @@ class GravatarServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['gravatar'] = $this->app->share(
-            function($app) {
+            function ($app) {
                 return new Gravatar(
                     config('gravatar.defaults.size'),
                     config('gravatar.secure')

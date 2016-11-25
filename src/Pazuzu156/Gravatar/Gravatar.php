@@ -41,7 +41,7 @@ class Gravatar implements IImage
      *
      * @return void
      */
-    public function __construct($defaultSize = 200, $secure = false)
+    public function __construct($defaultSize = 500, $secure = false)
     {
         $this->setSize($defaultSize);
 
@@ -153,7 +153,7 @@ class Gravatar implements IImage
         }
 
         $uri = '?';
-        
+
         $ignore = ['email','hash','secure'];
         foreach($this->_options as $k => $v) {
             if (!in_array($k, $ignore)) {
@@ -176,8 +176,12 @@ class Gravatar implements IImage
      *
      * @return string
      */
-    public function img($email, $alt = '', array $attr = [])
+    public function img($email = '', $alt = '', array $attr = [])
     {
+        if (empty($email)) {
+            $email = $this->_options['email'];
+        }
+
         $img = '<img src="' . $this->src($email, $attr) . '"';
 
         if (!empty($alt)) {

@@ -62,8 +62,20 @@ class Gravatar
 
         // set defaults that cannot be set here,
         // but can be upon generation request
-        $this->setImageSet($this->avatar::MM);
-        $this->setRating($this->avatar::G);
+        $this->setImageSet($this->_const('MM'));
+        $this->setRating($this->_const('G'));
+    }
+
+    /**
+     * Gets a constant. Use when $obj->avatar()::CONSTANT doesn't work (support function).
+     *
+     * @param string $constant - The constant to load
+     *
+     * @return mixed
+     */
+    public function _const($constant)
+    {
+        return constant(get_class($this->avatar).'::'.$constant);
     }
 
     /**

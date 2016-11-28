@@ -8,7 +8,7 @@
 The Gravatar library is built to get user avatars and profile information. The library is built to work as is, with Scara v1.03, AND with Laravel 5
 
 ## Installing
-To install, either download the source code, or use Composer
+To install, either download the source code, or use Composer.
 
 ### Source
 After downloading, point to the built in autoloader and include the Gravatar class.

@@ -5,114 +5,41 @@
 [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/pazuzu156/gravatar.svg?style=flat-square)](https://libraries.io/github/pazuzu156/Gravatar)
 [![Packagist](https://img.shields.io/packagist/l/pazuzu156/gravatar.svg?style=flat-square)](https://packagist.org/packages/pazuzu156/gravatar)
 
-This Gravatar library is built to be simple to use AND integrate into my own framework as well as Laravel 5.
+The Gravatar library is built to get user avatars and profile information. The library is built to work as is, with Scara v1.03, AND with Laravel 5
 
 ## Installing
-You can either download the source code and include Gravatar in your code
+To install, either download the source code, or use Composer
+
+### Source
+After downloading, point to the built in autoloader and include the Gravatar class.
 
 ```php
-require_once 'path/to/src/Pazuzu156/Gravatar/autoload.php';
-
-use Pazuzu156\Gravatar\Gravatar;
+<?php
+...
+require_once __DIR__.'/path/to/src/Pazuzu156/Gravatar/autoload.php';
+use Pazuzu156\Gravatar\Gravatar
+...
 ```
 
-or use Composer
+### Composer
+Use Composer and install the library, then include the new autoloader and the Gravatar class.
 
 ```shell
 $ composer require pazuzu156/gravatar ^1.0
 ```
 
-and include it into your code
-
 ```php
+<?php
+...
 require_once __DIR__.'/vendor/autoload.php';
-
-use Pazuzu156\Gravatar\Gravatar;
-```
-
-## Default Use
-
-Create a new Gravatar instance
-
-```php
-$g = new \Pazuzu156\Gravatar\Gravatar();
-```
-
-And either get the source URL
-
-```php
-$src = $g->src('email@domain.com');
-```
-
-or get the HTML image
-
-```php
-$img = $g->img('email@domain.com');
-```
-
-## Setting extra options
-To set extra options before generation, use the following. (All can be chained together too!)
-
-#### `setEmail()`
-
-`setEmail` can be used to set the user's email address
-
-**NOTE:** While `img()` has an optional `$email` parameter, `src()` requires you supply the email. So `setEmail()` is not needed if all you want is the source URL
-
-#### `setImageSet()`
-
-`setImageSet` sets the image set for the requested Gravatar image. Refer to `IImage` for available image sets
-
-#### `setRating()`
-
-`setRating` sets the max rating for the requested Gravatar image. Reger to `IImage` for available ratings
-
-#### `setSize()`
-
-`setSize` sets the size of the requested Gravatar image. (The default is 500 as set in the libraries's configuration, or parameter if you're not using the configuration script)
-
-## Usage in Scara
-
-To use the library with Scara, you need to add the service provider and facade in Scara's configuration
-
-```php
-...
-'services' => [
-    'Pazuzu156\Gravatar\Scara\GravatarServiceProvider',
-],
-...
-'aliases' => [
-    'Gravatar' => 'Pazuzu156\Gravatar\Scara\GravatarFacade',
-],
+use Pazuzu156\Gravatar\Gravatar
 ...
 ```
 
-Then you can use the Facade within your application
+The Avatar and Profile classes are grabbed from the master Gravatar class, so there is no need
 
-```php
-$img = Gravatar::img('email@domain.com');
-$src = Gravatar::src('email@domain.com');
-```
+## Using
+Please refer to the wiki (not currently complete) or view the source code. It's properly documented, I promise :)
 
-## Usage in Laravel
-
-To use the library with Laravel, you need to add the service provider and facade in Laravel's configuration
-
-```php
-...
-'providers' => [
-    Pazuzu156\Gravatar\Scara\GravatarServiceProvider::class,
-],
-...
-'aliases' => [
-    'Gravatar' => Pazuzu156\Gravatar\Scara\GravatarFacade::class,
-],
-...
-```
-
-Then you can use the Facade within your application
-
-```php
-$img = Gravatar::img('email@domain.com');
-$src = Gravatar::src('email@domain.com');
-```
+## License
+This library is licensed under the MIT license (basically the most free and open OSS license ;))

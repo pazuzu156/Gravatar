@@ -67,6 +67,26 @@ class Gravatar
     }
 
     /**
+     * Returns the Avatar instance
+     *
+     * @return \Pazuzu156\Gravatar\Avatar
+     */
+    public function avatar()
+    {
+        return $this->avatar;
+    }
+
+    /**
+     * Returns the Profile instance
+     *
+     * @return \Pazuzu156\Gravatar\Profile
+     */
+    public function profile()
+    {
+        return $this->profile;
+    }
+
+    /**
      * Sets the email you want to use for image generation.
      *
      * @param string $email - The email to use

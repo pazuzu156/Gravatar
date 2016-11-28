@@ -92,7 +92,7 @@ class Avatar
     private $_gravatar = null;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param \Pazuzu156\Gravatar\Gravatar $gravatar
      *

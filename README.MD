@@ -41,5 +41,51 @@ The Avatar and Profile classes are grabbed from the master Gravatar class, so th
 ## Using
 Please refer to the wiki (not currently complete) or view the source code. It's properly documented, I promise :)
 
+### Usage in Scara
+
+To use the library with Scara, you need to add the service provider and facade in Scara's configuration
+
+```php
+...
+'services' => [
+    'Pazuzu156\Gravatar\Scara\GravatarServiceProvider',
+],
+...
+'aliases' => [
+    'Gravatar' => 'Pazuzu156\Gravatar\Scara\GravatarFacade',
+],
+...
+```
+
+Then you can use the Facade within your application
+
+```php
+$img = Gravatar::avatar()->img('email@domain.com');
+$src = Gravatar::avatar()->src('email@domain.com');
+```
+
+### Usage in Laravel
+
+To use the library with Laravel, you need to add the service provider and facade in Laravel's configuration
+
+```php
+...
+'providers' => [
+    Pazuzu156\Gravatar\Scara\GravatarServiceProvider::class,
+],
+...
+'aliases' => [
+    'Gravatar' => Pazuzu156\Gravatar\Scara\GravatarFacade::class,
+],
+...
+```
+
+Then you can use the Facade within your application
+
+```php
+$img = Gravatar::avatar()->img('email@domain.com');
+$src = Gravatar::avatar()->src('email@domain.com');
+```
+
 ## License
 This library is licensed under the MIT license (basically the most free and open OSS license ;))

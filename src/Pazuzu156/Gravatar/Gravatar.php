@@ -67,7 +67,7 @@ class Gravatar
     }
 
     /**
-     * Returns the Avatar instance
+     * Returns the Avatar instance.
      *
      * @return \Pazuzu156\Gravatar\Avatar
      */
@@ -77,7 +77,7 @@ class Gravatar
     }
 
     /**
-     * Returns the Profile instance
+     * Returns the Profile instance.
      *
      * @return \Pazuzu156\Gravatar\Profile
      */

@@ -2,7 +2,6 @@
 [![StyleCI](https://styleci.io/repos/74735391/shield?branch=master)](https://styleci.io/repos/74735391)
 [![Latest Stable Version](https://poser.pugx.org/pazuzu156/gravatar/v/stable?format=flat-square)](https://packagist.org/packages/pazuzu156/gravatar)
 [![Downloads](https://img.shields.io/packagist/dt/pazuzu156/gravatar.svg?style=flat-square)](https://packagist.org/packages/pazuzu156/gravatar)
-[![Libraries.io for GitHub](https://img.shields.io/librariesio/github/pazuzu156/gravatar.svg?style=flat-square)](https://libraries.io/github/pazuzu156/Gravatar)
 [![Packagist](https://img.shields.io/packagist/l/pazuzu156/gravatar.svg?style=flat-square)](https://packagist.org/packages/pazuzu156/gravatar)
 
 The Gravatar library is built to get user avatars and profile information. The library is built to work as is, with Scara v1.03, AND with Laravel 5

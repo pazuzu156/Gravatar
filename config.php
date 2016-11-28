@@ -7,8 +7,8 @@ return  [
         'size'     => 500,
         'width'    => 0,
         'height'   => 0,
-        'imageSet' => 4,
-        'rating'   => 5,
+        'imageSet' => 'mm',
+        'rating'   => 'g',
     ],
     // sets whether or not you wish to use a secure URL
     'secure' => true,

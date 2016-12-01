@@ -14,7 +14,10 @@
     "autoload": {
         "psr-4": {
             "Pazuzu156\\Gravatar\\": "src/Pazuzu156/Gravatar/"
-        }
+        },
+        "files": [
+            "src/Pazuzu156/Gravatar/helpers.php"
+        ]
     },
     "minimum-stability": "dev"
 }

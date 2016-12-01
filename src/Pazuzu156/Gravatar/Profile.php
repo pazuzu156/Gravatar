@@ -60,6 +60,16 @@ class Profile
         $url = $this->_gravatar->generateUrl('profile', $this->_gravatar->getEmail()).'.php';
 
         if (is_null($this->_data)) {
+            // Let's make a quick check to see if the user exists
+            // we'll throw an exception if a 404 is returned
+            $h = get_headers($url, 1)[0];
+            $code = substr($h, strrpos($h, '404'), strlen($h));
+
+            if ($code == '404 Not Found') {
+                throw new \Exception('404 Error code was thrown. Perhaps invalid email?');
+            }
+
+            // No error? K! Get the contents ;)
             $this->_data = file_get_contents($url);
         }
 

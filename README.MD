@@ -35,7 +35,7 @@ use Pazuzu156\Gravatar\Gravatar
 ...
 ```
 
-The Avatar and Profile classes are grabbed from the master Gravatar class, so there is no need
+The Avatar and Profile classes are grabbed from the master Gravatar class, so there is no need to refer to them yourself.
 
 ## Using
 Please refer to the wiki (not currently complete) or view the source code. It's properly documented, I promise :)

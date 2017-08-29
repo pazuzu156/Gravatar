@@ -19,5 +19,18 @@
             "src/Pazuzu156/Gravatar/helpers.php"
         ]
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Pazuzu156\\Gravatar\\Laravel\\GravatarServiceProvider"
+            ],
+            "aliases": {
+                "Gravatar": "Pazuzu156\\Gravatar\\Laravel\\GravatarFacade"
+            }
+        }
+    },
     "minimum-stability": "dev"
 }

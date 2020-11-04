@@ -50,7 +50,7 @@ class Gravatar
      *
      * @return void
      */
-    public function __construct($defaultSize = 500, $secure = false)
+    public function __construct($defaultSize = 500, $secure = true)
     {
         // Create avatar/profile instances
         $this->avatar = new Avatar($this);
